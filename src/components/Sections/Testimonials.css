@@ -1,0 +1,39 @@
+.testimonials-container{
+  display:flex; flex-direction:column; align-items:center; gap:24px;
+}
+.testimonial-cards{
+  display:flex; gap:50px; justify-content:center; width:100%;
+}
+.testimonial-card{
+  position:relative; padding-top:26px; width:100%; max-width:368px;
+}
+.quote-icon{
+  position:absolute; top:0; left:156px; transform:translateX(-50%);
+  width:52px; height:52px; z-index:2;
+}
+/* Dấu ngoặc kép ở sau icon */
+.quote-icon::after{
+  content:'“'; position:absolute; top:75%; left:50%; transform:translate(-50%,-50%);
+  font-family:var(--font-decor); font-size:64px; font-weight:900; color:#fff; pointer-events:none;
+}
+
+.testimonial-card .card-content{
+  background:#fff; border-radius:4px; padding:42px 24px 25px;
+  display:flex; flex-direction:column; gap:24px; height:100%;
+}
+.testimonial-text{
+  font-size:20px; font-weight:200; line-height:1.3; text-align:justify; margin:0; flex-grow:1; font-style:italic;
+}
+.author-title{
+  font-family:var(--font-button); font-weight:900; font-size:24px; color:var(--color-primary);
+  margin:0 0 12px;
+}
+.author-field{ font-size:18px; font-weight:200; margin:0; }
+
+@media (max-width:1200px){
+  .testimonial-cards{ gap:20px; }
+  .quote-icon{ left:50%; }
+}
+@media (max-width:992px){
+  .testimonial-cards{ flex-direction:column; align-items:center; gap:50px; }
+}

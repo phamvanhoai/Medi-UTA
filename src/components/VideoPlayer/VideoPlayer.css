@@ -1,0 +1,61 @@
+/* Play icon (tam giác) & Pause icon (||) */
+.hv-play::before{
+  content:"";
+  position:absolute; left:28px; top:18px;
+  border-left:22px solid #fff;
+  border-top:18px solid transparent;
+  border-bottom:18px solid transparent;
+}
+.hv-play.paused::before{
+  content:""; left:24px; top:18px; width:22px; height:36px;
+  background:linear-gradient(to right, #fff 40%, transparent 40%, transparent 60%, #fff 60%);
+  border:none;
+}
+
+/* Khung player chung */
+.hero-video{
+  position:relative; max-width:750px; border-radius:6px; overflow:hidden;
+  box-shadow:0 0 10px rgba(0,0,0,.25);
+}
+.hv-bg{ display:block; width:100%; object-fit:cover; background:#000; }
+.hv-overlay{
+  position:absolute; inset:0;
+  background:linear-gradient(270deg, rgba(0,0,0,.5), rgba(0,0,0,.2)26%, rgba(0,0,0,0)46%);
+}
+.hv-play{
+  position:absolute; inset:0; margin:auto; width:72px; height:72px;
+  background:var(--color-primary); border-radius:50%;
+  box-shadow:0 4px 14px rgba(0,0,0,.3); z-index:2;
+  transition:opacity .2s, transform .2s;
+}
+
+/* Logo góc trên nền hồng */
+.hv-logo{
+  position:absolute; top:14px; left:-2px;
+  background:var(--color-primary);
+  padding:14px 16px; border-radius:4px; z-index:2; display:inline-flex; align-items:center; justify-content:center;
+}
+.hv-logo img{ height:20px; width:auto; display:block; }
+
+/* Text góc phải dưới */
+.hv-text{
+  position:absolute; right:18px; bottom:18px; color:#fff;
+  font:700 28px/1.15 var(--font-special);
+  letter-spacing:4px; text-align:right; z-index:2;
+}
+.hv-pill{
+  background:#ff5fac; color:#fff; padding:2px 8px; border-radius:4px; display:inline-block;
+}
+
+/* State playing */
+.hero-video.playing .hv-overlay{ display:none; }
+.hero-video.playing .hv-play{ opacity:0; pointer-events:none; transform:scale(.95); }
+
+/* Hover gợi ý */
+.hero-video:hover .hv-play{ opacity:.9; pointer-events:auto; }
+
+/* Responsive */
+@media (max-width:768px){
+  .hv-bg{ height:300px; }
+  .hv-text{ font-size:22px; letter-spacing:3px; }
+}

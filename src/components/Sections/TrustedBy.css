@@ -1,0 +1,25 @@
+.trusted-by-container{
+  display:flex; flex-direction:column; align-items:center; gap:24px;
+}
+.new-bg {
+  background: radial-gradient(circle, #ff007a 0%, #ff007aa8 40%, #ffffff 100%);
+}
+
+
+.logo-strip-wrapper{ overflow:hidden; width:100%; }
+.logo-strip{
+  display:flex; gap:90px; animation:slide 25s linear infinite;
+}
+.logo-strip img{
+  height:74px; width:auto; flex-shrink:0;
+}
+
+@keyframes slide{
+  from{ transform:translateX(0); }
+  to{ transform:translateX(-50%); }
+}
+
+@media (max-width:768px){
+  .logo-strip{ gap:40px; }
+  .logo-strip img{ height:50px; }
+}

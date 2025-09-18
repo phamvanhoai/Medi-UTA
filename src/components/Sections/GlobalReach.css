@@ -1,0 +1,19 @@
+.global-reach-container{
+  display:flex; align-items:center; gap:71px;
+}
+.global-reach-image{ flex-shrink:0; width:100%; max-width:588px; }
+.global-reach-image img{ border-radius:10px; box-shadow:0 4px 12px 3px rgba(0,0,0,.25); }
+
+.global-reach-content{ display:flex; flex-direction:column; align-items:flex-start; }
+.global-reach-content .section-subtitle-wrapper{ align-items:flex-start; width:436px; }
+.global-reach-content .heading-xl,
+.global-reach-content .text-lg{ text-align:left; }
+.global-reach-content .btn{ font-size:28px; }
+
+@media (max-width:992px){
+  .global-reach-container{ flex-direction:column; }
+  .global-reach-content{ align-items:center; }
+  .global-reach-content .section-subtitle-wrapper{ align-items:center; width:100%; }
+  .global-reach-content .heading-xl,
+  .global-reach-content .text-lg{ text-align:center; }
+}

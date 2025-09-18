@@ -1,0 +1,19 @@
+.case-study-container{
+  display:flex; align-items:center; gap:160px;
+}
+.case-study-content{
+  display:flex; flex-direction:column; align-items:flex-start; gap:24px; max-width:450px;
+}
+.case-study-content .section-subtitle-wrapper{ align-items:flex-start; width:101px; }
+.case-study-content .heading-xl,
+.case-study-content .text-lg{ text-align:left; }
+.case-study-content .btn{ font-size:28px; }
+.case-study-image{ flex-shrink:0; width:100%; max-width:585px; }
+
+@media (max-width:992px){
+  .case-study-container{ flex-direction:column; gap:40px; }
+  .case-study-content{ align-items:center; }
+  .case-study-content .section-subtitle-wrapper{ align-items:center; width:100%; }
+  .case-study-content .heading-xl,
+  .case-study-content .text-lg{ text-align:center; }
+}

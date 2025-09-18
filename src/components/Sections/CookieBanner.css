@@ -1,0 +1,14 @@
+#cookie-banner{
+  position:fixed; bottom:0; left:0; right:0; background:var(--color-background-light);
+  padding:20px 0; z-index:2000; border-top:1px solid rgba(255,255,255,.1);
+}
+.cookie-container{
+  display:flex; flex-direction:column; align-items:center; gap:10px; text-align:center;
+}
+#cookie-banner p{
+  font-family:var(--font-special); font-size:15px; line-height:1.2; margin:0; max-width:90%;
+}
+.cookie-link{ color:var(--color-primary); text-decoration:underline; }
+.cookie-accept{
+  font-family:var(--font-heading); font-weight:700; font-size:19px; color:var(--color-primary);
+}

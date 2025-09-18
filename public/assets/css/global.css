@@ -1,0 +1,187 @@
+/* Saira Regular */
+@font-face {
+  font-family: 'Saira';
+  src: url('font/Saira-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Saira Extra Condensed Extra Light Italic */
+@font-face {
+  font-family: 'Saira Extra Condensed';
+  src: url('font/Saira_ExtraCondensed-ExtraLightItalic.ttf') format('truetype');
+  font-weight: 200;
+  font-style: italic;
+  font-display: swap;
+}
+
+/* Lisboa Sans OSF Light */
+@font-face {
+  font-family: 'Lisboa Sans OSF';
+  src: url('font/Lisboa Sans OSF Light Regular.otf') format('opentype');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Fontspring DEMO Aalto Sans Essential Black */
+@font-face {
+  font-family: 'Aalto Sans Essential';
+  src: url('font/Fontspring-DEMO-aaltosansessential-black.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Savigny W01 Bold Cond */
+@font-face {
+  font-family: 'Savigny';
+  src: url('font/Savigny W01 Bold Cond.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+
+/* Bạn khai báo thêm các weight khác (200, 500, 900) tương tự */
+
+
+:root {
+  --color-primary: #ff5fac;
+  --color-text: #182848;
+  --color-background: #ffffff;
+  --color-background-light: #ffeff7;
+  --font-heading: 'Saira', sans-serif;
+  --font-body: 'Saira', sans-serif;
+  --font-button: 'Aalto Sans Essential', sans-serif;
+  --font-decor: 'Savigny', sans-serif;
+  /* --font-special: 'Saira', sans-serif; Using Saira as a substitute for Lisboa Sans OSF */
+  
+  --font-special: 'Lisboa Sans OSF', sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-body);
+  background-color: var(--color-background);
+  color: var(--color-text);
+  overflow-x: hidden;
+}
+
+.page-wrapper {
+  max-width: 1440px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+section {
+  padding: 80px 0;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.btn {
+  display: inline-block;
+  padding: 14px 20px;
+  border-radius: 4px;
+  font-family: var(--font-button);
+  font-weight: 900;
+  text-align: center;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn-primary {
+  background-color: var(--color-primary);
+  color: #ffffff;
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.25);
+}
+
+.btn-primary:hover {
+  background-color: #e6539b;
+}
+
+.section-subtitle {
+    font-family: var(--font-special);
+    font-weight: 400;
+    font-size: 20px;
+    letter-spacing: 3.4px;
+    text-transform: uppercase;
+    margin: 0;
+}
+
+.section-subtitle-line {
+    width: 100%;
+    height: 3px;
+    background-color: var(--color-primary);
+    margin-top: 8px;
+}
+
+.heading-xl {
+    font-family: var(--font-button);
+    font-weight: 700;
+    font-size: 60px;
+    line-height: 1;
+    text-align: center;
+    margin: 10px 0;
+}
+
+.text-lg {
+    font-weight: 200;
+    font-size: 25px;
+    line-height: 1.5;
+    text-align: center;
+    margin: 0;
+}
+
+.quote-icon::after {
+  content: '“';
+  position: absolute;
+  top: 75%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: var(--font-decor);
+  font-size: 64px;
+  font-weight: 900;
+  color: var(--color-background);
+  pointer-events: none;
+}
+
+
+@media (max-width: 768px) {
+    .heading-xl {
+        font-size: 40px;
+    }
+    .text-lg {
+        font-size: 20px;
+    }
+    section {
+        padding: 60px 0;
+    }
+}
